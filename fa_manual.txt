@@ -1,0 +1,23 @@
+1 - подключение переменных окружающей среды
+pip install python-dotenv
+
+2 - подклюяение БД
+3 - миграции alembic перегонный куб
+pip install alembic==1.7.7
+
+Инициализация
+alembic init --template async migrations
+
+настройки, указанные в env.py перезап шут дефолтное значение в alembic.ini
+
+4 - работа с миграциями
+alembic revision
+alembic upgrade
+alembic downgrade
+alembic current
+
+Сначала создаем миграции, затем их применяем.
+Выполнение всех непримененных миграций:
+alembic upgrade head
+alembic downgrade base
+alembic history (-i)(-v)
