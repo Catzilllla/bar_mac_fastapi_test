@@ -10,7 +10,7 @@ class mySettings(BaseSettings):
     app_title: str = 'Внутренний title в классе'
     description: str
     db_sqlite_url: str
-    db_postgr_url: str
+    #db_postgr_url: str
 
     class Config:
         env_file = '.env'
